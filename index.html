@@ -30,7 +30,7 @@
             Halo, Saya <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Muhammad Ulul Albab</span>
         </h1>
         <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-8 leading-relaxed">
-            Seorang pengembang aplikasi web dan sistem fungsional kustom yang berfokus pada performa bersih, UI modern, dan solusi digital yang solutif.
+            Seorang pengembang aplikasi web dan mobile kustom yang berfokus pada performa bersih, UI modern, dan solusi digital yang solutif.
         </p>
         <div class="flex flex-wrap gap-4">
             <a href="#projects" class="bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold px-6 py-3 rounded-xl transition shadow-lg shadow-cyan-500/20">
@@ -47,7 +47,7 @@
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white">Tentang Saya</h2>
             <p class="text-slate-300 leading-relaxed text-base md:text-lg max-w-3xl">
-                Saya memiliki ketertarikan mendalam dalam dunia pemrograman, khususnya pembuatan web aplikasi fungsional, sistem dashboard manajemen, hingga solusi kustom berbasis digital. Terbiasa merancang logika program yang rapi dan terstruktur untuk menyelesaikan masalah secara efisien.
+                Saya memiliki ketertarikan mendalam dalam dunia pemrograman, khususnya pembuatan web aplikasi fungsional, aplikasi mobile lintas platform dengan React Native, hingga sistem dashboard manajemen kustom. Terbiasa merancang logika program yang rapi dan terstruktur untuk menyelesaikan masalah secara efisien.
             </p>
         </div>
     </section>
@@ -56,17 +56,29 @@
     <section id="projects" class="border-t border-slate-800 py-20">
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">Portofolio Pilihan</h2>
-            <p class="text-slate-400 text-sm mb-10">Klik pada kartu proyek di bawah untuk melihat foto utuh dan keterangan lengkap.</p>
+            <p class="text-slate-400 text-sm mb-10">Klik pada kartu proyek di bawah untuk melihat keterangan lengkap dan tautan unduh aplikasi.</p>
             
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project 1 Card -->
-                <div onclick="openModal('modal1')" class="bg-slate-800/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-cyan-500 transition cursor-pointer flex flex-col justify-between group shadow-lg">
-                    <div class="h-48 bg-slate-950 overflow-hidden border-b border-slate-800 relative">
-                        <img src="project1.jpg" alt="Clinical Suite Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                            <span class="bg-cyan-500 text-slate-950 font-bold text-xs px-4 py-2 rounded-lg shadow-md">Klik untuk Lihat Foto Utuh</span>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Project 1 Card: LDR Anchor (New) -->
+                <div onclick="openModal('modalLdr')" class="bg-slate-800/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-orange-500 transition cursor-pointer flex flex-col justify-between group shadow-lg">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold px-3 py-1 bg-orange-500/10 text-orange-400 rounded-full border border-orange-500/20">Mobile App</span>
+                            <span class="text-xs text-slate-500">React Native / Firebase</span>
                         </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition">LDR Anchor</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Aplikasi mobile interaktif khusus pasangan jarak jauh (LDR) dengan fitur pembagian suasana hati real-time dan pengiriman pelukan virtual.
+                        </p>
                     </div>
+                    <div class="px-6 pb-6 flex items-center gap-3">
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">React Native</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Firebase</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 Card -->
+                <div onclick="openModal('modal1')" class="bg-slate-800/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-cyan-500 transition cursor-pointer flex flex-col justify-between group shadow-lg">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-xs font-semibold px-3 py-1 bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20">Web App</span>
@@ -74,7 +86,7 @@
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition">Clinical Suite Dashboard</h3>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                            Aplikasi web sistem manajemen klinis fungsional dengan fitur pencatatan data dan kalkulator parameter terstruktur yang bersih dan responsif.
+                            Aplikasi web sistem manajemen klinis fungsional dengan fitur pencatatan data dan kalkulator parameter terstruktur.
                         </p>
                     </div>
                     <div class="px-6 pb-6 flex items-center gap-3">
@@ -83,7 +95,7 @@
                     </div>
                 </div>
 
-                <!-- Project 2 Card -->
+                <!-- Project 3 Card -->
                 <div onclick="openModal('modal2')" class="bg-slate-800/40 border border-slate-800 rounded-2xl p-6 hover:border-blue-500 transition cursor-pointer flex flex-col justify-between group shadow-lg">
                     <div>
                         <div class="flex items-center justify-between mb-4">
@@ -92,7 +104,7 @@
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition">Sales & Warehouse Tracker</h3>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                            Sistem rekap transaksi penjualan lintas platform dan pemantauan stok gudang otomatis secara real-time untuk efisiensi bisnis.
+                            Sistem rekap transaksi penjualan lintas platform dan pemantauan stok gudang otomatis secara real-time.
                         </p>
                     </div>
                     <div class="px-6 pb-6 flex items-center gap-3">
@@ -104,30 +116,47 @@
         </div>
     </section>
 
+    <!-- MODAL POPUP LDR ANCHOR (NEW) -->
+    <div id="modalLdr" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 md:p-8 relative shadow-2xl my-8">
+            <button onclick="closeModal('modalLdr')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition z-10">
+                ✕
+            </button>
+            <span class="text-xs font-semibold px-3 py-1 bg-orange-500/10 text-orange-400 rounded-full border border-orange-500/20 inline-block mb-3">Mobile Application Project</span>
+            <h3 class="text-2xl font-bold text-white mb-4">LDR Anchor — Hubungan Jarak Jauh</h3>
+            
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                Aplikasi mobile berbasis Android yang dikembangkan menggunakan React Native dan Firebase Firestore. Dirancang khusus untuk membantu pasangan jarak jauh (LDR) tetap terhubung secara emosional melalui fitur sinkronisasi suasana hati (Mood) dan kirim pelukan virtual interaktif.
+            </p>
+            <div class="mb-6">
+                <h4 class="text-xs font-semibold uppercase tracking-wider text-orange-400 mb-2">Fitur Utama:</h4>
+                <ul class="space-y-2 text-sm text-slate-300">
+                    <li>✓ Sistem pairing akun unik antar pasangan secara aman.</li>
+                    <li>✓ Berbagi status suasana hati (Mood) real-time dengan catatan khusus.</li>
+                    <li>✓ Fitur kirim pelukan virtual interaktif antar perangkat.</li>
+                </ul>
+            </div>
+            <div class="flex flex-wrap justify-end gap-3">
+                <button onclick="closeModal('modalLdr')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-5 py-2.5 rounded-xl transition text-sm">Tutup</button>
+                <!-- Ganti '#' dengan link download APK dari dashboard EAS Expo lu -->
+                <a href="https://expo.dev/accounts/masululs-team/projects/my-ldr-app/builds/960ad4ae-a915-487d-dc5cbae420a5" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-slate-950 font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-md flex items-center gap-2">
+                    📥 Download APK Android
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- MODAL POPUP PROJECT 1 -->
     <div id="modal1" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 md:p-8 relative shadow-2xl my-8">
             <button onclick="closeModal('modal1')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition z-10">
                 ✕
             </button>
-            <span class="text-xs font-semibold px-3 py-1 bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20 inline-block mb-3">Detail Proyek & Screenshot Full</span>
+            <span class="text-xs font-semibold px-3 py-1 bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20 inline-block mb-3">Detail Proyek Web</span>
             <h3 class="text-2xl font-bold text-white mb-4">Clinical Suite Dashboard</h3>
-            
-            <div class="mb-6 rounded-xl overflow-hidden border border-slate-700 bg-slate-950 flex items-center justify-center p-2">
-                <img src="project1.jpg" alt="Full Screenshot Clinical Suite Dashboard" class="w-full h-auto max-h-[75vh] object-contain rounded-lg">
-            </div>
-
             <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                Sistem manajemen klinis berbasis web yang dirancang khusus untuk mempercepat rekapitulasi data medis pasien dan menyediakan alat hitung parameter fungsional secara otomatis, meminimalisir kesalahan manual serta menghemat waktu operasional harian.
+                Sistem manajemen klinis berbasis web yang dirancang khusus untuk mempercepat rekapitulasi data medis pasien dan menyediakan alat hitung parameter fungsional secara otomatis.
             </p>
-            <div class="mb-6">
-                <h4 class="text-xs font-semibold uppercase tracking-wider text-cyan-400 mb-2">Fitur Unggulan:</h4>
-                <ul class="space-y-2 text-sm text-slate-300">
-                    <li>✓ Form pencatatan data pasien yang tersetruktur dan tervalidasi.</li>
-                    <li>✓ Kalkulator parameter klinis terintegrasi otomatis.</li>
-                    <li>✓ Antarmuka responsif berbasis Tailwind CSS yang nyaman diakses via desktop maupun tablet.</li>
-                </ul>
-            </div>
             <div class="flex justify-end gap-3">
                 <button onclick="closeModal('modal1')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-5 py-2.5 rounded-xl transition text-sm">Tutup</button>
                 <a href="#contact" onclick="closeModal('modal1')" class="bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-md">Pesan Sistem Serupa</a>
@@ -144,16 +173,8 @@
             <span class="text-xs font-semibold px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20 inline-block mb-3">Detail Proyek</span>
             <h3 class="text-2xl font-bold text-white mb-4">Sales & Warehouse Tracker</h3>
             <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                Platform pemantauan inventaris gudang dan rekapitulasi transaksi penjualan lintas toko online secara terpusat untuk membantu pemilik bisnis memantau arus barang dan omzet secara real-time.
+                Platform pemantauan inventaris gudang dan rekapitulasi transaksi penjualan lintas toko online secara terpusat.
             </p>
-            <div class="mb-6">
-                <h4 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">Fitur Unggulan:</h4>
-                <ul class="space-y-2 text-sm text-slate-300">
-                    <li>✓ Dashboard ringkasan penjualan harian, mingguan, dan bulanan.</li>
-                    <li>✓ Sistem tracking stok gudang otomatis (stok berkurang saat transaksi tercatat).</li>
-                    <li>✓ Pencatatan multi-platform digital terpusat dalam satu layar.</li>
-                </ul>
-            </div>
             <div class="flex justify-end gap-3">
                 <button onclick="closeModal('modal2')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-5 py-2.5 rounded-xl transition text-sm">Tutup</button>
                 <a href="#contact" onclick="closeModal('modal2')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-md">Pesan Sistem Serupa</a>
@@ -169,7 +190,7 @@
                 Mari diskusikan kebutuhan proyek atau pembuatan aplikasi custom Anda bersama saya.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://wa.me/62895414781707?text=Halo%2C%20saya%20tertarik%20dengan%20jasa%20pembuatan%20web%20aplikasi%20Anda." target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-xl transition shadow-lg shadow-emerald-600/20">
+                <a href="https://wa.me/62895414781707?text=Halo%2C%20saya%20tertarik%20dengan%20jasa%20pembuatan%20web%20dan%20aplikasi%20Anda." target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-xl transition shadow-lg shadow-emerald-600/20">
                     Hubungi via WhatsApp
                 </a>
                 <a href="Portfolio_Muhammad_Ulul_Albab.pptx" download class="inline-block bg-cyan-600 hover:bg-cyan-500 text-white font-bold px-8 py-3.5 rounded-xl transition shadow-lg shadow-cyan-600/20">
