@@ -30,7 +30,7 @@
             Halo, Saya <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Muhammad Ulul Albab</span>
         </h1>
         <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-8 leading-relaxed">
-            Seorang pengembang aplikasi web dan mobile kustom yang berfokus pada performa bersih, UI modern, dan solusi digital yang solutif.
+            Seorang pengembang aplikasi web, mobile kustom, dan AI chatbot interaktif yang berfokus pada performa bersih dan solusi digital modern.
         </p>
         <div class="flex flex-wrap gap-4">
             <a href="#projects" class="bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold px-6 py-3 rounded-xl transition shadow-lg shadow-cyan-500/20">
@@ -47,7 +47,7 @@
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white">Tentang Saya</h2>
             <p class="text-slate-300 leading-relaxed text-base md:text-lg max-w-3xl">
-                Saya memiliki ketertarikan mendalam dalam dunia pemrograman, khususnya pembuatan web aplikasi fungsional, aplikasi mobile lintas platform dengan React Native, sistem dashboard manajemen kustom, hingga integrasi bot berbasis AI. Terbiasa merancang logika program yang rapi dan terstruktur untuk menyelesaikan masalah secara efisien.
+                Saya memiliki ketertarikan mendalam dalam dunia pemrograman, khususnya pembuatan web aplikasi fungsional, aplikasi mobile lintas platform dengan React Native, sistem dashboard manajemen kustom, hingga integrasi bot berbasis AI yang aktif 24/7 di cloud. Terbiasa merancang logika program yang rapi dan terstruktur untuk menyelesaikan masalah secara efisien.
             </p>
         </div>
     </section>
@@ -56,7 +56,7 @@
     <section id="projects" class="border-t border-slate-800 py-20">
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">Portofolio Pilihan</h2>
-            <p class="text-slate-400 text-sm mb-10">Klik pada kartu proyek di bawah untuk melihat foto utuh, keterangan lengkap, dan tautan unduh aplikasi.</p>
+            <p class="text-slate-400 text-sm mb-10">Klik pada kartu proyek di bawah untuk melihat detail lengkap dan tautan uji coba aplikasi secara langsung.</p>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Project 1 Card: LDR Anchor (Mobile App) -->
@@ -119,21 +119,22 @@
                     </div>
                 </div>
 
-                <!-- Project 4 Card: Telegram AI Assistant (NEW) -->
-                <div onclick="openModal('modalTelegram')" class="bg-slate-800/40 border border-slate-800 rounded-2xl p-6 hover:border-purple-500 transition cursor-pointer flex flex-col justify-between group shadow-lg">
+                <!-- Project 4 Card: Telegram AI Assistant (LIVE) -->
+                <div onclick="openModal('modalTelegram')" class="bg-slate-800/40 border border-slate-800 rounded-2xl p-6 hover:border-purple-500 transition cursor-pointer flex flex-col justify-between group shadow-lg relative overflow-hidden">
+                    <span class="absolute top-0 right-0 bg-purple-500 text-slate-950 text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">Live 24/7</span>
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-semibold px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20">AI / Bot</span>
-                            <span class="text-xs text-slate-500">Python / Groq</span>
+                            <span class="text-xs font-semibold px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20">AI Bot</span>
+                            <span class="text-xs text-slate-500">Python / Railway</span>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white group-hover:text-purple-400 transition">Telegram AI Assistant</h3>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                            Asisten virtual Telegram interaktif berbasis LLM (Llama-3.3) dengan kemampuan respons multibahasa secara real-time.
+                            Bot Telegram cerdas berbasis Llama-3.3 70B yang aktif di cloud 24/7, siap merespons percakapan multibahasa secara instan.
                         </p>
                     </div>
                     <div class="px-0 pb-0 flex items-center gap-3">
                         <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Python</span>
-                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Telegram API</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Groq API</span>
                     </div>
                 </div>
             </div>
@@ -143,12 +144,9 @@
     <!-- MODAL POPUP LDR ANCHOR (MOBILE APP) -->
     <div id="modalLdr" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 md:p-8 relative shadow-2xl my-8">
-            <button onclick="closeModal('modalLdr')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition z-10">
-                ✕
-            </button>
+            <button onclick="closeModal('modalLdr')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition z-10">✕</button>
             <span class="text-xs font-semibold px-3 py-1 bg-orange-500/10 text-orange-400 rounded-full border border-orange-500/20 inline-block mb-3">Mobile Application Project</span>
             <h3 class="text-2xl font-bold text-white mb-4">LDR Anchor — Hubungan Jarak Jauh</h3>
-            
             <p class="text-slate-300 text-sm leading-relaxed mb-6">
                 Aplikasi mobile berbasis Android yang dikembangkan menggunakan React Native dan Firebase Firestore. Dirancang khusus untuk membantu pasangan jarak jauh (LDR) tetap terhubung secara emosional melalui fitur sinkronisasi suasana hati (Mood) dan kirim pelukan virtual interaktif.
             </p>
@@ -169,30 +167,18 @@
         </div>
     </div>
 
-    <!-- MODAL POPUP CLINICAL SUITE DASHBOARD (DENGAN SCREENSHOT) -->
+    <!-- MODAL POPUP CLINICAL SUITE DASHBOARD -->
     <div id="modal1" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 md:p-8 relative shadow-2xl my-8">
-            <button onclick="closeModal('modal1')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition z-10">
-                ✕
-            </button>
+            <button onclick="closeModal('modal1')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition z-10">✕</button>
             <span class="text-xs font-semibold px-3 py-1 bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20 inline-block mb-3">Detail Proyek & Screenshot Full</span>
             <h3 class="text-2xl font-bold text-white mb-4">Clinical Suite Dashboard</h3>
-            
             <div class="mb-6 rounded-xl overflow-hidden border border-slate-700 bg-slate-950 flex items-center justify-center p-2">
                 <img src="project1.jpg" alt="Full Screenshot Clinical Suite Dashboard" class="w-full h-auto max-h-[75vh] object-contain rounded-lg">
             </div>
-
             <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                Sistem manajemen klinis berbasis web yang dirancang khusus untuk mempercepat rekapitulasi data medis pasien dan menyediakan alat hitung parameter fungsional secara otomatis, meminimalisir kesalahan manual serta menghemat waktu operasional harian.
+                Sistem manajemen klinis berbasis web yang dirancang khusus untuk mempercepat rekapitulasi data medis pasien dan menyediakan alat hitung parameter fungsional secara otomatis.
             </p>
-            <div class="mb-6">
-                <h4 class="text-xs font-semibold uppercase tracking-wider text-cyan-400 mb-2">Fitur Unggulan:</h4>
-                <ul class="space-y-2 text-sm text-slate-300">
-                    <li>✓ Form pencatatan data pasien yang tersetruktur dan tervalidasi.</li>
-                    <li>✓ Kalkulator parameter klinis terintegrasi otomatis.</li>
-                    <li>✓ Antarmuka responsif berbasis Tailwind CSS yang nyaman diakses via desktop maupun tablet.</li>
-                </ul>
-            </div>
             <div class="flex justify-end gap-3">
                 <button onclick="closeModal('modal1')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-5 py-2.5 rounded-xl transition text-sm">Tutup</button>
                 <a href="#contact" onclick="closeModal('modal1')" class="bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-md">Pesan Sistem Serupa</a>
@@ -203,13 +189,11 @@
     <!-- MODAL POPUP PROJECT 2 -->
     <div id="modal2" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-2xl w-full p-6 md:p-8 relative shadow-2xl my-8">
-            <button onclick="closeModal('modal2')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition">
-                ✕
-            </button>
+            <button onclick="closeModal('modal2')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition">✕</button>
             <span class="text-xs font-semibold px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20 inline-block mb-3">Detail Proyek</span>
             <h3 class="text-2xl font-bold text-white mb-4">Sales & Warehouse Tracker</h3>
             <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                Platform pemantauan inventaris gudang dan rekapitulasi transaksi penjualan lintas toko online secara terpusat untuk membantu pemilik bisnis memantau arus barang dan omzet secara real-time.
+                Platform pemantauan inventaris gudang dan rekapitulasi transaksi penjualan lintas toko online secara terpusat secara real-time.
             </p>
             <div class="flex justify-end gap-3">
                 <button onclick="closeModal('modal2')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-5 py-2.5 rounded-xl transition text-sm">Tutup</button>
@@ -218,29 +202,27 @@
         </div>
     </div>
 
-    <!-- MODAL POPUP TELEGRAM AI ASSISTANT (NEW) -->
+    <!-- MODAL POPUP TELEGRAM AI ASSISTANT (UPDATED & LIVE) -->
     <div id="modalTelegram" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 md:p-8 relative shadow-2xl my-8">
-            <button onclick="closeModal('modalTelegram')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition">
-                ✕
-            </button>
-            <span class="text-xs font-semibold px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20 inline-block mb-3">AI Bot Project</span>
+            <button onclick="closeModal('modalTelegram')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition">✕</button>
+            <span class="text-xs font-semibold px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20 inline-block mb-3">AI Bot Project • Live on Cloud</span>
             <h3 class="text-2xl font-bold text-white mb-4">Telegram AI Personal Assistant</h3>
             <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                Bot Telegram cerdas yang dikembangkan menggunakan Python dan diintegrasikan dengan Groq API (Llama-3.3 70B). Dilengkapi system prompt kustom agar mampu merespons dengan gaya bahasa yang luwes, santai, gaul, serta mendukung percakapan multibahasa secara instan.
+                Asisten virtual Telegram interaktif yang dikembangkan menggunakan Python, memanfaatkan model AI canggih Llama-3.3 70B via Groq API, dan di-hosting secara permanen di Railway (24/7 online). Dilengkapi system prompt kustom agar responsif, cerdas, dan santai.
             </p>
             <div class="mb-6">
-                <h4 class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-2">Fitur Utama:</h4>
+                <h4 class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-2">Arsitektur & Fitur:</h4>
                 <ul class="space-y-2 text-sm text-slate-300">
-                    <li>✓ Integrasi real-time Telegram Bot API menggunakan pyTelegramBotAPI.</li>
-                    <li>✓ Pemrosesan bahasa alami berkecepatan tinggi dengan LLM Groq.</li>
-                    <li>✓ Persona interaktif & dukungan multibahasa (Indonesia, Inggris, Jepang, dll).</li>
+                    <li>✓ Integrasi real-time Telegram Bot API (pyTelegramBotAPI).</li>
+                    <li>✓ Performa tinggi berkat integrasi model LLM Llama-3.3.</li>
+                    <li>✓ Aktif 24/7 di cloud server tanpa henti.</li>
                 </ul>
             </div>
-            <div class="flex justify-end gap-3">
+            <div class="flex flex-wrap justify-end gap-3">
                 <button onclick="closeModal('modalTelegram')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-5 py-2.5 rounded-xl transition text-sm">Tutup</button>
-                <a href="https://t.me/botasik_bot" target="_blank" class="bg-purple-600 hover:bg-purple-500 text-white font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-md flex items-center gap-2">
-                    🤖 Coba Bot di Telegram
+                <a href="https://t.me/BotasikBot" target="_blank" class="bg-purple-600 hover:bg-purple-500 text-white font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-md flex items-center gap-2">
+                    🤖 Coba Langsung (@BotasikBot)
                 </a>
             </div>
         </div>
