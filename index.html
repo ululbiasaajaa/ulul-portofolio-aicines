@@ -72,7 +72,7 @@
             <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">Portofolio Pilihan</h2>
             <p class="text-slate-400 text-sm mb-10">Klik pada kartu proyek di bawah untuk melihat detail lengkap dan tautan uji coba aplikasi secara langsung.</p>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Project 1 Card: LDR Anchor (Mobile App) -->
                 <div onclick="openModal('modalLdr')" class="bg-slate-800/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-orange-500 transition cursor-pointer flex flex-col justify-between group shadow-lg">
                     <div class="p-6">
@@ -149,6 +149,24 @@
                     <div class="px-0 pb-0 flex items-center gap-3">
                         <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Python</span>
                         <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Groq API</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 Card: Domain Explorer (Laravel) [BARU] -->
+                <div onclick="openModal('modalDomain')" class="bg-slate-800/40 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500 transition cursor-pointer flex flex-col justify-between group shadow-lg">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-full border border-emerald-500/20">Web Application</span>
+                            <span class="text-xs text-slate-500">Laravel / MySQL</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-emerald-400 transition">Domain Explorer</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Aplikasi penjelajah dan manajemen domain web berbasis Laravel untuk riset ketersediaan, status, serta pengelolaan database domain.
+                        </p>
+                    </div>
+                    <div class="px-0 pb-0 flex items-center gap-3">
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Laravel</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Tailwind</span>
                     </div>
                 </div>
             </div>
@@ -238,6 +256,30 @@
                 <a href="https://t.me/BotasikBot" target="_blank" class="bg-purple-600 hover:bg-purple-500 text-white font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-md flex items-center gap-2">
                     🤖 Coba Langsung (@BotasikBot)
                 </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL POPUP DOMAIN EXPLORER [BARU] -->
+    <div id="modalDomain" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 md:p-8 relative shadow-2xl my-8">
+            <button onclick="closeModal('modalDomain')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition z-10">✕</button>
+            <span class="text-xs font-semibold px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-full border border-emerald-500/20 inline-block mb-3">Fullstack Web Project</span>
+            <h3 class="text-2xl font-bold text-white mb-4">Domain Explorer — Laravel App</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                Aplikasi manajemen dan eksplorasi domain yang dibangun menggunakan framework Laravel dan Tailwind CSS. Dirancang untuk mengelola data domain, mengecek status ketersediaan/ekstensi, serta membantu riset infrastruktur website secara terstruktur.
+            </p>
+            <div class="mb-6">
+                <h4 class="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2">Fitur Utama:</h4>
+                <ul class="space-y-2 text-sm text-slate-300">
+                    <li>✓ Manajemen basis data domain lokal (CRUD interaktif).</li>
+                    <li>✓ Integrasi tautan langsung ke URL eksternal secara real-time.</li>
+                    <li>✓ Desain antarmuka modern menggunakan Tailwind CSS.</li>
+                </ul>
+            </div>
+            <div class="flex flex-wrap justify-end gap-3">
+                <button onclick="closeModal('modalDomain')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-5 py-2.5 rounded-xl transition text-sm">Tutup</button>
+                <a href="#contact" onclick="closeModal('modalDomain')" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-md">Diskusikan Proyek</a>
             </div>
         </div>
     </div>
