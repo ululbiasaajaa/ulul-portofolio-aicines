@@ -115,6 +115,31 @@
                     </div>
                 </div>
 
+                <!-- Project BARU: PodLearn AI (AI Podcast & Quiz) -->
+                <div onclick="openModal('modalPodlearn')" class="bg-slate-800/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-violet-500 transition cursor-pointer flex flex-col justify-between group shadow-lg">
+                    <div class="h-36 bg-slate-950 overflow-hidden border-b border-slate-800 relative">
+                        <img src="project2.jpg" alt="PodLearn AI Podcast Generator" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="bg-violet-500 text-slate-950 font-bold text-xs px-3 py-1.5 rounded-lg shadow-md">Lihat Detail</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold px-3 py-1 bg-violet-500/10 text-violet-400 rounded-full border border-violet-500/20">AI Podcast</span>
+                            <span class="text-xs text-slate-500">Fullstack AI</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-violet-400 transition">PodLearn AI</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Generator podcast audio interaktif 2 pembicara dari dokumen PDF/materi teks lengkap dengan 10 kuis evaluasi otomatis.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 flex items-center gap-3">
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Gemini AI</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Edge TTS</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">FFmpeg</span>
+                    </div>
+                </div>
+
                 <!-- Project 3 Card: Sales & Warehouse Tracker -->
                 <div onclick="openModal('modal2')" class="bg-slate-800/40 border border-slate-800 rounded-2xl p-6 hover:border-blue-500 transition cursor-pointer flex flex-col justify-between group shadow-lg">
                     <div>
@@ -152,7 +177,7 @@
                     </div>
                 </div>
 
-                <!-- Project 5 Card: Domain Explorer (Laravel) [BARU] -->
+                <!-- Project 5 Card: Domain Explorer (Laravel) -->
                 <div onclick="openModal('modalDomain')" class="bg-slate-800/40 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500 transition cursor-pointer flex flex-col justify-between group shadow-lg">
                     <div>
                         <div class="flex items-center justify-between mb-4">
@@ -218,7 +243,36 @@
         </div>
     </div>
 
-    <!-- MODAL POPUP PROJECT 2 -->
+    <!-- MODAL POPUP PODLEARN AI (PROJECT 2 JPG) -->
+    <div id="modalPodlearn" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 md:p-8 relative shadow-2xl my-8">
+            <button onclick="closeModal('modalPodlearn')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition z-10">✕</button>
+            <span class="text-xs font-semibold px-3 py-1 bg-violet-500/10 text-violet-400 rounded-full border border-violet-500/20 inline-block mb-3">AI Application • Fullstack Project</span>
+            <h3 class="text-2xl font-bold text-white mb-4">PodLearn — AI Podcast & Interactive Quiz Generator</h3>
+            <div class="mb-6 rounded-xl overflow-hidden border border-slate-700 bg-slate-950 flex items-center justify-center p-2">
+                <img src="project2.jpg" alt="Full Screenshot PodLearn AI" class="w-full h-auto max-h-[75vh] object-contain rounded-lg">
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                Aplikasi kecerdasan buatan end-to-end yang mengubah dokumen PDF/teks materi panjang menjadi audio percakapan podcast 2 orang (Host & Expert) secara otomatis dengan teknologi Neural Text-to-Speech, penggabungan audio FFmpeg, serta 10 kuis evaluasi interaktif secara dinamis.
+            </p>
+            <div class="mb-6">
+                <h4 class="text-xs font-semibold uppercase tracking-wider text-violet-400 mb-2">Arsitektur & Fitur Utama:</h4>
+                <ul class="space-y-2 text-sm text-slate-300">
+                    <li>✓ Parsing dokumen otomatis dari file `.pdf` & `.txt`.</li>
+                    <li>✓ Naskah percakapan santai Rian (Host) & Maya (Expert) via Gemini AI.</li>
+                    <li>✓ Pengisian suara multi-karakter realistis menggunakan Microsoft Edge Neural TTS.</li>
+                    <li>✓ Penggabungan otomatis berkas MP3 di server menggunakan FFmpeg Concat.</li>
+                    <li>✓ Evaluasi kuis 10 soal interaktif dengan perhitungan skor dinamis.</li>
+                </ul>
+            </div>
+            <div class="flex flex-wrap justify-end gap-3">
+                <button onclick="closeModal('modalPodlearn')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-5 py-2.5 rounded-xl transition text-sm">Tutup</button>
+                <a href="#contact" onclick="closeModal('modalPodlearn')" class="bg-violet-600 hover:bg-violet-500 text-white font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-md">Pesan Sistem AI Serupa</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL POPUP PROJECT 2 (SALES & WAREHOUSE TRACKER) -->
     <div id="modal2" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-2xl w-full p-6 md:p-8 relative shadow-2xl my-8">
             <button onclick="closeModal('modal2')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition">✕</button>
@@ -260,7 +314,7 @@
         </div>
     </div>
 
-    <!-- MODAL POPUP DOMAIN EXPLORER [BARU] -->
+    <!-- MODAL POPUP DOMAIN EXPLORER -->
     <div id="modalDomain" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 md:p-8 relative shadow-2xl my-8">
             <button onclick="closeModal('modalDomain')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition z-10">✕</button>
