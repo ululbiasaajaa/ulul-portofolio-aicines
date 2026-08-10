@@ -78,16 +78,17 @@
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-xs font-semibold px-3 py-1 bg-orange-500/10 text-orange-400 rounded-full border border-orange-500/20">Mobile App</span>
-                            <span class="text-xs text-slate-500">React Native</span>
+                            <span class="text-xs text-slate-500">React Native / FCM V1</span>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition">LDR Anchor</h3>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                            Aplikasi mobile interaktif khusus pasangan jarak jauh (LDR) dengan fitur pembagian suasana hati real-time dan pelukan virtual.
+                            Aplikasi mobile interaktif khusus pasangan LDR dengan fitur pembagian suasana hati real-time, pelukan virtual, dan sistem Push Notification otomatis via FCM V1.
                         </p>
                     </div>
-                    <div class="px-6 pb-6 flex items-center gap-3">
+                    <div class="px-6 pb-6 flex flex-wrap items-center gap-2">
                         <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">React Native</span>
                         <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Firebase</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">FCM V1 Push</span>
                     </div>
                 </div>
 
@@ -205,14 +206,16 @@
             <span class="text-xs font-semibold px-3 py-1 bg-orange-500/10 text-orange-400 rounded-full border border-orange-500/20 inline-block mb-3">Mobile Application Project</span>
             <h3 class="text-2xl font-bold text-white mb-4">LDR Anchor — Hubungan Jarak Jauh</h3>
             <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                Aplikasi mobile berbasis Android yang dikembangkan menggunakan React Native dan Firebase Firestore. Dirancang khusus untuk membantu pasangan jarak jauh (LDR) tetap terhubung secara emosional melalui fitur sinkronisasi suasana hati (Mood) dan kirim pelukan virtual interaktif.
+                Aplikasi mobile berbasis Android yang dikembangkan menggunakan React Native, Firebase Firestore, dan Expo Notifications. Dirancang khusus untuk membantu pasangan jarak jauh (LDR) tetap terhubung secara emosional melalui fitur sinkronisasi suasana hati (Mood) real-time, pelukan virtual interaktif, serta integrasi Push Notification langsung saat pesan/interaksi dikirim.
             </p>
             <div class="mb-6">
-                <h4 class="text-xs font-semibold uppercase tracking-wider text-orange-400 mb-2">Fitur Utama:</h4>
+                <h4 class="text-xs font-semibold uppercase tracking-wider text-orange-400 mb-2">Fitur Utama & Infrastructure:</h4>
                 <ul class="space-y-2 text-sm text-slate-300">
-                    <li>✓ Sistem pairing akun unik antar pasangan secara aman.</li>
+                    <li>✓ Sistem pairing akun unik antar pasangan secara aman via Firebase Auth & Firestore.</li>
                     <li>✓ Berbagi status suasana hati (Mood) real-time dengan catatan khusus.</li>
                     <li>✓ Fitur kirim pelukan virtual interaktif antar perangkat.</li>
+                    <li>✓ Integrasi **Firebase Cloud Messaging (FCM V1 API)** via **Expo Push Service**.</li>
+                    <li>✓ Manajemen kredensial native Android terintegrasi menggunakan **EAS Build Credentials**.</li>
                 </ul>
             </div>
             <div class="flex flex-wrap justify-end gap-3">
