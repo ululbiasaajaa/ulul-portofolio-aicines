@@ -199,12 +199,24 @@
         </div>
     </section>
 
-    <!-- MODAL POPUP LDR ANCHOR (MOBILE APP) -->
+    <!-- MODAL POPUP LDR ANCHOR (MOBILE APP + QR CODE) -->
     <div id="modalLdr" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 md:p-8 relative shadow-2xl my-8">
             <button onclick="closeModal('modalLdr')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition z-10">✕</button>
             <span class="text-xs font-semibold px-3 py-1 bg-orange-500/10 text-orange-400 rounded-full border border-orange-500/20 inline-block mb-3">Mobile Application Project</span>
             <h3 class="text-2xl font-bold text-white mb-4">LDR Anchor — Hubungan Jarak Jauh</h3>
+            
+            <!-- Box Tampilan QR Code APK -->
+            <div class="mb-6 bg-slate-950 p-4 rounded-xl border border-slate-800 flex flex-col md:flex-row items-center gap-4">
+                <img src="qrcodeapk.jpg" alt="QR Code Download APK LDR Anchor" class="w-32 h-32 object-contain bg-white p-2 rounded-lg shadow-md border border-slate-700">
+                <div class="text-center md:text-left">
+                    <span class="text-xs font-bold text-orange-400 uppercase tracking-wider block mb-1">Scan untuk Download APK</span>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Arahkan kamera HP Anda ke QR Code ini untuk langsung mengunduh dan menginstal berkas APK Android terbaru di perangkat Anda.
+                    </p>
+                </div>
+            </div>
+
             <p class="text-slate-300 text-sm leading-relaxed mb-6">
                 Aplikasi mobile berbasis Android yang dikembangkan menggunakan React Native, Firebase Firestore, dan Expo Notifications. Dirancang khusus untuk membantu pasangan jarak jauh (LDR) tetap terhubung secara emosional melalui fitur sinkronisasi suasana hati (Mood) real-time, pelukan virtual interaktif, serta integrasi Push Notification langsung saat pesan/interaksi dikirim.
             </p>
@@ -214,15 +226,12 @@
                     <li>✓ Sistem pairing akun unik antar pasangan secara aman via Firebase Auth & Firestore.</li>
                     <li>✓ Berbagi status suasana hati (Mood) real-time dengan catatan khusus.</li>
                     <li>✓ Fitur kirim pelukan virtual interaktif antar perangkat.</li>
-                    <li>✓ Integrasi <strong class="text-white font-semibold">Firebase Cloud Messaging (FCM V1 API)</strong> via <strong class="text-white font-semibold">Expo Push Service</strong>.</li>
-                    <li>✓ Manajemen kredensial native Android terintegrasi menggunakan <strong class="text-white font-semibold">EAS Build Credentials</strong>.</li>
+                    <li>✓ Integrasi <span class="text-white font-semibold">Firebase Cloud Messaging (FCM V1 API)</span> via <span class="text-white font-semibold">Expo Push Service</span>.</li>
+                    <li>✓ Manajemen kredensial native Android terintegrasi menggunakan <span class="text-white font-semibold">EAS Build Credentials</span>.</li>
                 </ul>
             </div>
             <div class="flex flex-wrap justify-end gap-3">
                 <button onclick="closeModal('modalLdr')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-5 py-2.5 rounded-xl transition text-sm">Tutup</button>
-                <a href="https://expo.dev/artifacts/eas/j5yFqXgXstLspxsc6C8GjR.apk" download class="bg-orange-500 hover:bg-orange-600 text-slate-950 font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-md flex items-center gap-2">
-                    📥 Download APK Android
-                </a>
             </div>
         </div>
     </div>
