@@ -116,8 +116,9 @@
                     </div>
                 </div>
 
-                <!-- Project 3 Card: Cloud Inventory System (BARU UPDATE) -->
-                <div onclick="openModal('modalInventory')" class="bg-slate-800/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-sky-500 transition cursor-pointer flex flex-col justify-between group shadow-lg">
+                <!-- Project 3 Card: Cloud Inventory System (DENGAN DIRECT LIVE LINK) -->
+                <div onclick="openModal('modalInventory')" class="bg-slate-800/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-sky-500 transition cursor-pointer flex flex-col justify-between group shadow-lg relative">
+                    <span class="absolute top-0 right-0 bg-sky-500 text-slate-950 text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider z-10">Live Web App</span>
                     <div class="h-36 bg-slate-950 overflow-hidden border-b border-slate-800 relative">
                         <img src="project3.jpg" alt="Cloud Inventory System" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
                         <div class="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
@@ -134,9 +135,14 @@
                             Sistem manajemen inventaris serverless skala produksi dengan dashboard real-time, RBAC, dan proteksi concurrency.
                         </p>
                     </div>
-                    <div class="px-6 pb-6 flex items-center gap-2">
-                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Google Workspace</span>
-                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">JS/HTML</span>
+                    <div class="px-6 pb-6 flex items-center justify-between gap-2">
+                        <div class="flex gap-1.5">
+                            <span class="text-xs px-2 py-1 rounded bg-slate-800 text-slate-300">Google Workspace</span>
+                            <span class="text-xs px-2 py-1 rounded bg-slate-800 text-slate-300">JS/HTML</span>
+                        </div>
+                        <a href="https://script.google.com/macros/s/AKfycbyW7R5AyM4FYccVJZsCxH4YcUwK6uwme2urJjglOF2WjfA5tUI7lgKViLY4vz7sBXg/exec" target="_blank" onclick="event.stopPropagation()" class="text-xs bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 font-bold px-2.5 py-1 rounded-lg border border-sky-500/30 transition flex items-center gap-1">
+                            🚀 Demo
+                        </a>
                     </div>
                 </div>
 
@@ -261,7 +267,7 @@
         </div>
     </div>
 
-    <!-- MODAL POPUP INVENTORY SYSTEM (BARU UPDATE) -->
+    <!-- MODAL POPUP INVENTORY SYSTEM (DENGAN TOMBOL BUKA WEB APP LIVE) -->
     <div id="modalInventory" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 md:p-8 relative shadow-2xl my-8">
             <button onclick="closeModal('modalInventory')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition z-10">✕</button>
@@ -285,7 +291,9 @@
             </div>
             <div class="flex flex-wrap justify-end gap-3">
                 <button onclick="closeModal('modalInventory')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-5 py-2.5 rounded-xl transition text-sm">Tutup</button>
-                <a href="#contact" onclick="closeModal('modalInventory')" class="bg-sky-600 hover:bg-sky-500 text-white font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-md">Pesan Sistem Serupa</a>
+                <a href="https://script.google.com/macros/s/AKfycbyW7R5AyM4FYccVJZsCxH4YcUwK6uwme2urJjglOF2WjfA5tUI7lgKViLY4vz7sBXg/exec" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-md flex items-center gap-2">
+                    🚀 Buka Web App Live
+                </a>
             </div>
         </div>
     </div>
