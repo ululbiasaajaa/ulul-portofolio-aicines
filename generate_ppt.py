@@ -469,7 +469,7 @@ def create_portfolio_pptx():
     contacts = [
         "📱 WhatsApp : +62 895-4147-81707",
         "✉️ Email    : ulula2812@gmail.com",
-        "🌐 Portofolio: scentdna-5646.vercel.app",
+        "🌐 Portofolio: https://ulul-portofolio-3odd.vercel.app/",
         "📍 Lokasi   : Bogor, Jawa Barat, Indonesia"
     ]
     for c in contacts:
