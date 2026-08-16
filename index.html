@@ -82,7 +82,38 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <!-- Project NEW: ScentDNA (AI Fragrance Engine) -->
+                <!-- Project NEW: Premium Digital Wedding Invitation -->
+                <div onclick="openModal('modalWedding')" class="bg-slate-800/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-pink-500 transition cursor-pointer flex flex-col justify-between group shadow-lg relative">
+                    <span class="absolute top-0 right-0 bg-pink-500 text-slate-950 text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider z-10">Commercial Prototype</span>
+                    <div class="h-36 bg-slate-950 overflow-hidden border-b border-slate-800 relative">
+                        <img src="project5.jpg" alt="Premium Digital Wedding Invitation" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="bg-pink-500 text-slate-950 font-bold text-xs px-3 py-1.5 rounded-lg shadow-md">Lihat Detail</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold px-3 py-1 bg-pink-500/10 text-pink-400 rounded-full border border-pink-500/20">Frontend App</span>
+                            <span class="text-xs text-slate-500">React / Vite</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-pink-400 transition">Digital Wedding Invitation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Prototipe platform undangan pernikahan digital premium, modern, & responsive berbasis reusable component architecture siap komersialisasi.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 flex items-center justify-between gap-2">
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">React</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Tailwind</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Vite</span>
+                        </div>
+                        <a href="https://wedding-invitation-gamma-nine-24.vercel.app/" target="_blank" onclick="event.stopPropagation()" class="text-xs bg-pink-500/10 hover:bg-pink-500/20 text-pink-400 font-bold px-2.5 py-1 rounded-lg border border-pink-500/30 transition flex items-center gap-1">
+                            🚀 Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project: ScentDNA (AI Fragrance Engine) -->
                 <div onclick="openModal('modalScentDNA')" class="bg-slate-800/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-rose-500 transition cursor-pointer flex flex-col justify-between group shadow-lg relative">
                     <span class="absolute top-0 right-0 bg-rose-500 text-slate-950 text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider z-10">AI & Containerized Engine</span>
                     <div class="h-36 bg-slate-950 overflow-hidden border-b border-slate-800 relative">
@@ -263,6 +294,40 @@
             </div>
         </div>
     </section>
+
+    <!-- MODAL POPUP WEDDING INVITATION -->
+    <div id="modalWedding" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 md:p-8 relative shadow-2xl my-8">
+            <button onclick="closeModal('modalWedding')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition z-10">✕</button>
+            <span class="text-xs font-semibold px-3 py-1 bg-pink-500/10 text-pink-400 rounded-full border border-pink-500/20 inline-block mb-3">Frontend Prototype Project</span>
+            <h3 class="text-2xl font-bold text-white mb-4">Digital Wedding Invitation Premium</h3>
+            
+            <div class="mb-6 rounded-xl overflow-hidden border border-slate-700 bg-slate-950 flex items-center justify-center p-2">
+                <img src="project5.jpg" alt="Digital Wedding Invitation Screenshot" class="w-full h-auto max-h-[75vh] object-contain rounded-lg">
+            </div>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                Prototipe aplikasi undangan pernikahan digital premium berbasis React & Tailwind CSS. Dirancang dengan pendekatan <i>Mobile-First Design</i>, tata letak elegan & romantis, serta arsitektur komponen modular yang siap dikembangkan menjadi platform generator template undangan digital komersialisasi.
+            </p>
+            <div class="mb-6">
+                <h4 class="text-xs font-semibold uppercase tracking-wider text-pink-400 mb-2">HIGHLIGHT FITUR & TEKNIS:</h4>
+                <ul class="space-y-2 text-sm text-slate-300">
+                    <li>✓ <span class="text-white font-semibold">Opening Screen & Cover:</span> Tampilan pembuka personalisasi nama tamu undangan.</li>
+                    <li>✓ <span class="text-white font-semibold">Hero & Real-Time Countdown:</span> Timer hitung mundur otomatis menuju hari H pernikahan.</li>
+                    <li>✓ <span class="text-white font-semibold">Interactive Section:</span> Timeline perjalanan cinta (Our Story), integrasi Google Maps lokasi acara, dan Pre-wedding Gallery Grid.</li>
+                    <li>✓ <span class="text-white font-semibold">Simulasi RSVP & Digital Wishes:</span> Form konfirmasi kehadiran & papan ucapan doa restu interaktif.</li>
+                    <li>✓ <span class="text-white font-semibold">Wedding Gift & Copy Action:</span> Fitur salin nomor rekening bank otomatis untuk kado pernikahan.</li>
+                    <li>✓ <span class="text-white font-semibold">Reusable Data Architecture:</span> Seluruh data terpusat di `weddingData.js` untuk kemudahan kustomisasi antar klien.</li>
+                </ul>
+            </div>
+            <div class="flex flex-wrap justify-end gap-3">
+                <button onclick="closeModal('modalWedding')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-5 py-2.5 rounded-xl transition text-sm">Tutup</button>
+                <a href="https://wedding-invitation-gamma-nine-24.vercel.app/" target="_blank" class="bg-pink-600 hover:bg-pink-500 text-white font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-md flex items-center gap-2">
+                    🚀 Buka Live App
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- MODAL POPUP SCENTDNA -->
     <div id="modalScentDNA" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
