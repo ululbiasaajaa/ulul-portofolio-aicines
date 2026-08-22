@@ -34,6 +34,7 @@ def create_portfolio_pptx():
     SKY_ACCENT = RGBColor(2, 132, 199)    # Sky 600 (#0284C7)
     PURPLE_ACCENT = RGBColor(139, 92, 246) # Purple 500 (#8B5CF6)
     EMERALD_ACCENT = RGBColor(16, 185, 129) # Emerald 500 (#10B981)
+    BLUE_ACCENT = RGBColor(37, 99, 235)   # Blue 600 (#2563EB) - SchoolCom Accent
 
     def set_slide_background(slide):
         background = slide.background
@@ -171,10 +172,10 @@ def create_portfolio_pptx():
     add_header(slide3, "Keahlian & Ekosistem Teknologi", "Technical Stack")
 
     stacks = [
-        ("Frontend & Mobile", "React, React Native, Expo, Tailwind CSS, Vite, HTML/JS", CYAN_ACCENT, 0.8, 1.8),
-        ("Backend & API", "FastAPI (Python), Laravel 11 (PHP), Node.js / Express", ROSE_ACCENT, 6.8, 1.8),
+        ("Frontend & Mobile", "React, React Native, Expo SDK 54, Tailwind CSS, Vite, HTML/JS", CYAN_ACCENT, 0.8, 1.8),
+        ("Backend & API", "FastAPI (Python), Laravel 11 (PHP), Node.js / Express, Firebase", ROSE_ACCENT, 6.8, 1.8),
         ("AI & Data Intelligence", "Gemini RAG API, PyTorch, SentenceTransformers, pgvector", PURPLE_ACCENT, 0.8, 4.3),
-        ("Database & Cloud", "PostgreSQL, MySQL, Firebase Firestore, SQLite, Docker", EMERALD_ACCENT, 6.8, 4.3)
+        ("Database & Cloud", "PostgreSQL, MySQL, Firebase Firestore, SQLite, Docker, Vercel", EMERALD_ACCENT, 6.8, 4.3)
     ]
 
     for title, desc, color, x, y in stacks:
@@ -200,13 +201,54 @@ def create_portfolio_pptx():
         p2.font.color.rgb = PRIMARY_TEXT
 
     # ==========================================
-    # SLIDE 4: PROJECT 1 - SCENTDNA
+    # SLIDE 4: FEATURED SYSTEM - SCHOOLCOM MVP
     # ==========================================
     slide4 = prs.slides.add_slide(blank_layout)
     set_slide_background(slide4)
-    add_header(slide4, "ScentDNA — AI Fragrance Discovery Engine", "Featured AI Project")
+    add_header(slide4, "SchoolCom — School Management & Communication System", "Featured Enterprise & Mobile Project")
 
     card = slide4.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(1.8), Inches(11.733), Inches(4.8))
+    card.fill.solid()
+    card.fill.fore_color.rgb = CARD_BG
+    card.line.color.rgb = BLUE_ACCENT
+
+    tf = card.text_frame
+    tf.word_wrap = True
+    tf.margin_left = Inches(0.4)
+    tf.margin_top = Inches(0.3)
+
+    p = tf.paragraphs[0]
+    p.text = "Sistem Pengelolaan & Komunikasi Sekolah Terpadu 3 Peran (Android & Web)"
+    p.font.bold = True
+    p.font.size = Pt(18)
+    p.font.color.rgb = BLUE_ACCENT
+
+    p = tf.add_paragraph()
+    p.text = "Tech Stack: React Native (Expo SDK 54), Firebase Firestore/Auth, React, Vite, Tailwind CSS v4, Vercel\n"
+    p.font.size = Pt(12)
+    p.font.bold = True
+    p.font.color.rgb = CYAN_ACCENT
+
+    highlights_schoolcom = [
+        "Role-Based Architecture (RBAC): Tiga antarmuka terpisah khusus untuk Admin Sekolah, Guru Kelas, dan Orang Tua.",
+        "Module Auditability: 40 modul teraudit mencakup presensi harian batch, penginputan nilai rapor, & rekapitulasi.",
+        "Parent-Child Scoping: Transparansi pemantauan kehadiran dan catatan insiden/perilaku siswa secara aman.",
+        "Landing Page & Conversion: Landing page khusus Vercel terintegrasi ke WhatsApp (+62895414781707) untuk permintaan demo."
+    ]
+    for h in highlights_schoolcom:
+        p = tf.add_paragraph()
+        p.text = f"✓  {h}"
+        p.font.size = Pt(13)
+        p.font.color.rgb = PRIMARY_TEXT
+
+    # ==========================================
+    # SLIDE 5: PROJECT 2 - SCENTDNA
+    # ==========================================
+    slide5 = prs.slides.add_slide(blank_layout)
+    set_slide_background(slide5)
+    add_header(slide5, "ScentDNA — AI Fragrance Discovery Engine", "Featured AI Project")
+
+    card = slide5.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(1.8), Inches(11.733), Inches(4.8))
     card.fill.solid()
     card.fill.fore_color.rgb = CARD_BG
     card.line.color.rgb = ROSE_ACCENT
@@ -241,14 +283,14 @@ def create_portfolio_pptx():
         p.font.color.rgb = PRIMARY_TEXT
 
     # ==========================================
-    # SLIDE 5: PROJECT 2 - PODLEARN AI & TELEGRAM BOT
+    # SLIDE 6: PROJECT 3 - PODLEARN AI & TELEGRAM BOT
     # ==========================================
-    slide5 = prs.slides.add_slide(blank_layout)
-    set_slide_background(slide5)
-    add_header(slide5, "AI Solutions: PodLearn AI & Telegram Assistant", "Featured AI Projects")
+    slide6 = prs.slides.add_slide(blank_layout)
+    set_slide_background(slide6)
+    add_header(slide6, "AI Solutions: PodLearn AI & Telegram Assistant", "Featured AI Projects")
 
     # Podlearn
-    c1 = slide5.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(1.8), Inches(5.6), Inches(4.8))
+    c1 = slide6.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(1.8), Inches(5.6), Inches(4.8))
     c1.fill.solid()
     c1.fill.fore_color.rgb = CARD_BG
     c1.line.color.rgb = PURPLE_ACCENT
@@ -281,7 +323,7 @@ def create_portfolio_pptx():
         p.font.color.rgb = PRIMARY_TEXT
 
     # Telegram Bot
-    c2 = slide5.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(6.8), Inches(1.8), Inches(5.7), Inches(4.8))
+    c2 = slide6.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(6.8), Inches(1.8), Inches(5.7), Inches(4.8))
     c2.fill.solid()
     c2.fill.fore_color.rgb = CARD_BG
     c2.line.color.rgb = PURPLE_ACCENT
@@ -314,14 +356,14 @@ def create_portfolio_pptx():
         p.font.color.rgb = PRIMARY_TEXT
 
     # ==========================================
-    # SLIDE 6: PROJECT 3 - LDR ANCHOR & CLINICAL SUITE
+    # SLIDE 7: PROJECT 4 - LDR ANCHOR & CLINICAL SUITE
     # ==========================================
-    slide6 = prs.slides.add_slide(blank_layout)
-    set_slide_background(slide6)
-    add_header(slide6, "Mobile & Web Dashboard Systems", "Functional Systems")
+    slide7 = prs.slides.add_slide(blank_layout)
+    set_slide_background(slide7)
+    add_header(slide7, "Mobile & Web Dashboard Systems", "Functional Systems")
 
     # LDR Anchor
-    c1 = slide6.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(1.8), Inches(5.6), Inches(4.8))
+    c1 = slide7.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(1.8), Inches(5.6), Inches(4.8))
     c1.fill.solid()
     c1.fill.fore_color.rgb = CARD_BG
     c1.line.color.rgb = ORANGE_ACCENT
@@ -349,7 +391,7 @@ def create_portfolio_pptx():
         p.font.color.rgb = PRIMARY_TEXT
 
     # Clinical Suite
-    c2 = slide6.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(6.8), Inches(1.8), Inches(5.7), Inches(4.8))
+    c2 = slide7.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(6.8), Inches(1.8), Inches(5.7), Inches(4.8))
     c2.fill.solid()
     c2.fill.fore_color.rgb = CARD_BG
     c2.line.color.rgb = CYAN_ACCENT
@@ -377,14 +419,14 @@ def create_portfolio_pptx():
         p.font.color.rgb = PRIMARY_TEXT
 
     # ==========================================
-    # SLIDE 7: PROJECT 4 - CLOUD INVENTORY & DOMAIN EXPLORER
+    # SLIDE 8: PROJECT 5 - CLOUD INVENTORY & DOMAIN EXPLORER
     # ==========================================
-    slide7 = prs.slides.add_slide(blank_layout)
-    set_slide_background(slide7)
-    add_header(slide7, "Enterprise Serverless & Laravel Systems", "Web Applications")
+    slide8 = prs.slides.add_slide(blank_layout)
+    set_slide_background(slide8)
+    add_header(slide8, "Enterprise Serverless & Laravel Systems", "Web Applications")
 
     # Cloud Inventory
-    c1 = slide7.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(1.8), Inches(5.6), Inches(4.8))
+    c1 = slide8.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(1.8), Inches(5.6), Inches(4.8))
     c1.fill.solid()
     c1.fill.fore_color.rgb = CARD_BG
     c1.line.color.rgb = SKY_ACCENT
@@ -412,7 +454,7 @@ def create_portfolio_pptx():
         p.font.color.rgb = PRIMARY_TEXT
 
     # Domain Explorer
-    c2 = slide7.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(6.8), Inches(1.8), Inches(5.7), Inches(4.8))
+    c2 = slide8.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(6.8), Inches(1.8), Inches(5.7), Inches(4.8))
     c2.fill.solid()
     c2.fill.fore_color.rgb = CARD_BG
     c2.line.color.rgb = EMERALD_ACCENT
@@ -440,12 +482,12 @@ def create_portfolio_pptx():
         p.font.color.rgb = PRIMARY_TEXT
 
     # ==========================================
-    # SLIDE 8: CONTACT & CLOSING
+    # SLIDE 9: CONTACT & CLOSING
     # ==========================================
-    slide8 = prs.slides.add_slide(blank_layout)
-    set_slide_background(slide8)
+    slide9 = prs.slides.add_slide(blank_layout)
+    set_slide_background(slide9)
     
-    card = slide8.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(1.5), Inches(1.5), Inches(10.333), Inches(4.5))
+    card = slide9.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(1.5), Inches(1.5), Inches(10.333), Inches(4.5))
     card.fill.solid()
     card.fill.fore_color.rgb = CARD_BG
     card.line.color.rgb = CYAN_ACCENT
