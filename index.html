@@ -82,7 +82,38 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <!-- Project NEW: Premium Digital Wedding Invitation -->
+                <!-- Project NEW: SchoolCom (Mobile App & Management System) -->
+                <div onclick="openModal('modalSchoolCom')" class="bg-slate-800/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500 transition cursor-pointer flex flex-col justify-between group shadow-lg relative">
+                    <span class="absolute top-0 right-0 bg-blue-500 text-slate-950 text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider z-10">Live Web & App</span>
+                    <div class="h-36 bg-slate-950 overflow-hidden border-b border-slate-800 relative">
+                        <img src="project7.jpg" alt="SchoolCom Management System" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="bg-blue-500 text-slate-950 font-bold text-xs px-3 py-1.5 rounded-lg shadow-md">Lihat Detail</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">Mobile & Web App</span>
+                            <span class="text-xs text-slate-500">Expo / Firebase</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition">SchoolCom MVP</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Sistem manajemen & komunikasi sekolah terpadu 3-role (Admin, Guru, Orang Tua) berbasis React Native/Expo & Firebase dengan 40 modul teraudit.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 flex items-center justify-between gap-2">
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Expo</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">Firebase</span>
+                            <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300">RBAC</span>
+                        </div>
+                        <a href="https://landing-page-schoolcom.vercel.app/" target="_blank" onclick="event.stopPropagation()" class="text-xs bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 font-bold px-2.5 py-1 rounded-lg border border-blue-500/30 transition flex items-center gap-1">
+                            🚀 Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project: Premium Digital Wedding Invitation -->
                 <div onclick="openModal('modalWedding')" class="bg-slate-800/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-pink-500 transition cursor-pointer flex flex-col justify-between group shadow-lg relative">
                     <span class="absolute top-0 right-0 bg-pink-500 text-slate-950 text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider z-10">Commercial Prototype</span>
                     <div class="h-36 bg-slate-950 overflow-hidden border-b border-slate-800 relative">
@@ -301,6 +332,38 @@
         </div>
     </section>
 
+    <!-- MODAL POPUP SCHOOLCOM MVP -->
+    <div id="modalSchoolCom" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 md:p-8 relative shadow-2xl my-8">
+            <button onclick="closeModal('modalSchoolCom')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2.5 rounded-full transition z-10">✕</button>
+            <span class="text-xs font-semibold px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20 inline-block mb-3">Mobile & Web Management System</span>
+            <h3 class="text-2xl font-bold text-white mb-4">SchoolCom — School Management System</h3>
+            
+            <div class="mb-6 rounded-xl overflow-hidden border border-slate-700 bg-slate-950 flex items-center justify-center p-2">
+                <img src="project7.jpg" alt="SchoolCom Dashboard Screenshot" class="w-full h-auto max-h-[75vh] object-contain rounded-lg">
+            </div>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                Aplikasi sistem pengelolaan & komunikasi sekolah terintegrasi berbasis React Native / Expo SDK 54 dan Firebase. Dirancang untuk menghubungkan Admin, Guru, dan Orang Tua dalam satu ekosistem yang terstruktur melalui kontrol akses ketat (RBAC) dan 40 modul teraudit.
+            </p>
+            <div class="mb-6">
+                <h4 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">FITUR UTAMA & ARSITEKTUR SIKLUS PROSES:</h4>
+                <ul class="space-y-2 text-sm text-slate-300">
+                    <li>✓ <span class="text-white font-semibold">Admin Control Center:</span> Manajemen akun pengguna, alokasi kelas guru, dan pendelegasian hubungan siswa-orang tua.</li>
+                    <li>✓ <span class="text-white font-semibold">Presensi & Assessment Guru:</span> Pencatatan kehadiran sekelas sekali sentuh, input nilai rapor, dan pencatatan insiden/perilaku.</li>
+                    <li>✓ <span class="text-white font-semibold">Parent Portal Visibility:</span> Pemantauan statistik kehadiran anak, riwayat nilai, dan catatan insiden secara transparan.</li>
+                    <li>✓ <span class="text-white font-semibold">Role-Based Security & Audit:</span> Pengamanan backend dengan Firestore Security Rules dan 40 modul teruji.</li>
+                </ul>
+            </div>
+            <div class="flex flex-wrap justify-end gap-3">
+                <button onclick="closeModal('modalSchoolCom')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-5 py-2.5 rounded-xl transition text-sm">Tutup</button>
+                <a href="https://landing-page-schoolcom.vercel.app/" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-md flex items-center gap-2">
+                    🚀 Buka Landing Page Live
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- MODAL POPUP WEDDING INVITATION -->
     <div id="modalWedding" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 md:p-8 relative shadow-2xl my-8">
@@ -470,7 +533,7 @@
                 <img src="project2.jpg" alt="Full Screenshot PodLearn AI" class="w-full h-auto max-h-[75vh] object-contain rounded-lg">
             </div>
             <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                Aplikasi kecerdasan buatan end-to-end yang mengubah dokumen PDF/teks materi panjang menjadi audio percakapan podcast 2 orang (Host & Expert) secara otomatis dengan teknologi Neural Text-to-Speech, penggabungan audio FFmpeg, serta 10 kuis evaluasi interaktif secara dinamis.
+                Aplikasi kecerdasan buatan end-to-end yang mengubah dokumen PDF/materi teks panjang menjadi audio percakapan podcast 2 orang (Host & Expert) secara otomatis dengan teknologi Neural Text-to-Speech, penggabungan audio FFmpeg, serta 10 kuis evaluasi interaktif secara dinamis.
             </p>
             <div class="mb-6">
                 <h4 class="text-xs font-semibold uppercase tracking-wider text-violet-400 mb-2">Arsitektur & Fitur Utama:</h4>
