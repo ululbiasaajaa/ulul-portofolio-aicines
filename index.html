@@ -135,6 +135,13 @@
             pointer-events: none;
         }
         .project-card:hover::before { left: 130%; }
+
+        /* ===== Hamburger -> X animation ===== */
+        #hamburgerIcon span:nth-child(1) { transform-origin: center; }
+        #hamburgerIcon span:nth-child(3) { transform-origin: center; }
+        #hamburgerIcon.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+        #hamburgerIcon.is-open span:nth-child(2) { opacity: 0; }
+        #hamburgerIcon.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
     </style>
 </head>
 <body class="antialiased selection:bg-teal-400 selection:text-slate-950">
@@ -149,7 +156,7 @@
     <header class="sticky top-0 z-50 backdrop-blur-md" style="background: rgba(10,14,23,0.82); border-bottom: 1px solid var(--border);">
         <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
             <span class="font-display font-bold text-lg tracking-wider" style="color: var(--accent-teal);">ULUL<span style="color: var(--text-secondary);">.</span>DEV</span>
-            <div class="flex items-center space-x-6">
+            <div class="flex items-center space-x-3 md:space-x-6">
                 <nav class="hidden md:flex space-x-8 text-sm font-medium font-mono" style="color: var(--text-secondary);">
                     <a href="#about" class="nav-link hover:text-white transition" data-lang-en="About" data-lang-id="Tentang">About</a>
                     <a href="#projects" class="nav-link hover:text-white transition" data-lang-en="Projects" data-lang-id="Portofolio">Projects</a>
@@ -159,8 +166,22 @@
                 <button onclick="toggleLanguage()" class="font-mono text-xs font-semibold px-3 py-1.5 rounded-lg border transition flex items-center gap-1.5" style="border-color: var(--border-hover); background: var(--surface); color: var(--accent-teal);">
                     🌐 <span id="langLabel">EN / ID</span>
                 </button>
+                <!-- Mobile Hamburger Toggle -->
+                <button onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden flex flex-col justify-center items-center w-9 h-9 rounded-lg border transition" style="border-color: var(--border-hover); background: var(--surface);">
+                    <span id="hamburgerIcon" class="block relative w-4 h-3.5">
+                        <span class="absolute left-0 top-0 w-full h-[1.5px] rounded transition-all duration-300" style="background: var(--text-primary);"></span>
+                        <span class="absolute left-0 top-[6px] w-full h-[1.5px] rounded transition-all duration-300" style="background: var(--text-primary);"></span>
+                        <span class="absolute left-0 top-[12px] w-full h-[1.5px] rounded transition-all duration-300" style="background: var(--text-primary);"></span>
+                    </span>
+                </button>
             </div>
         </div>
+        <!-- Mobile Dropdown Menu -->
+        <nav id="mobileMenu" class="md:hidden hidden flex-col font-mono text-sm font-medium" style="background: var(--bg-alt); border-top: 1px solid var(--border);">
+            <a href="#about" onclick="closeMobileMenu()" class="block px-6 py-3.5 transition" style="color: var(--text-secondary); border-bottom: 1px solid var(--border);" data-lang-en="About" data-lang-id="Tentang">About</a>
+            <a href="#projects" onclick="closeMobileMenu()" class="block px-6 py-3.5 transition" style="color: var(--text-secondary); border-bottom: 1px solid var(--border);" data-lang-en="Projects" data-lang-id="Portofolio">Projects</a>
+            <a href="#contact" onclick="closeMobileMenu()" class="block px-6 py-3.5 transition" style="color: var(--text-secondary);" data-lang-en="Contact" data-lang-id="Kontak">Contact</a>
+        </nav>
     </header>
 
     <main>
@@ -213,10 +234,22 @@
                 <p data-lang-en="I am a junior software engineer with a Pharmacy background and a project-first approach to learning software engineering. My academic background trained me to work systematically, pay attention to detail, and solve problems through structured analysis." data-lang-id="Saya seorang junior software engineer dengan latar belakang Farmasi dan pendekatan praktis berbasis proyek. Latar belakang akademis melatih saya bekerja secara sistematis, teliti, dan memecahkan masalah melalui analisis terstruktur.">
                     I am a junior software engineer with a Pharmacy background and a project-first approach to learning software engineering. My academic background trained me to work systematically, pay attention to detail, and solve problems through structured analysis.
                 </p>
-                <p data-lang-en="I build web and mobile applications using React, React Native, and Expo, and backend services with Node.js, Express, and FastAPI. I have worked with authentication, role-based access, REST APIs, databases, and cloud deployment." data-lang-id="Saya membangun aplikasi web dan mobile menggunakan React, React Native, dan Expo, serta layanan backend menggunakan Node.js, Express, dan FastAPI. Terbiasa menangani autentikasi, RBAC, REST API, basis data, dan deployment cloud.">
+                <!--
+                    FIX: paragraf ini punya <span> bold di dalamnya. Sebelumnya elemen <p>
+                    juga membawa data-lang-en/data-lang-id versi teks polos, jadi saat toggle
+                    bahasa, innerText menimpa seluruh isi <p> dan menghapus <span> bold-nya
+                    secara permanen. Sekarang pakai data-lang-*-html (di-render via innerHTML)
+                    supaya markup <span> ikut disimpan di kedua bahasa.
+                -->
+                <p data-lang-en-html='I build web and mobile applications using <span class="text-white font-medium">React, React Native, and Expo</span>, and backend services with <span class="text-white font-medium">Node.js, Express, and FastAPI</span>. I have worked with authentication, role-based access, REST APIs, databases, and cloud deployment.' data-lang-id-html='Saya membangun aplikasi web dan mobile menggunakan <span class="text-white font-medium">React, React Native, dan Expo</span>, serta layanan backend menggunakan <span class="text-white font-medium">Node.js, Express, dan FastAPI</span>. Saya terbiasa menangani autentikasi, role-based access, REST API, basis data, dan deployment cloud.'>
                     I build web and mobile applications using <span class="text-white font-medium">React, React Native, and Expo</span>, and backend services with <span class="text-white font-medium">Node.js, Express, and FastAPI</span>. I have worked with authentication, role-based access, REST APIs, databases, and cloud deployment.
                 </p>
-                <p data-lang-en="My recent projects also involve Gemini API, RAG, vector search with PostgreSQL/pgvector, text-to-speech, FFmpeg, Docker, and cloud deployment. I am comfortable debugging across the stack and adapting to unfamiliar technologies when a project requires it." data-lang-id="Proyek-proyek terbaru saya juga melibatkan Gemini API, RAG, vector search dengan PostgreSQL/pgvector, text-to-speech, FFmpeg, Docker, dan deployment cloud.">
+                <!--
+                    FIX: sama seperti di atas (span bold hilang saat toggle), DITAMBAH versi
+                    Indonesia sebelumnya terpotong (kalimat terakhir soal debugging tidak
+                    diterjemahkan sama sekali). Sudah dilengkapi.
+                -->
+                <p data-lang-en-html='My recent projects also involve <span class="text-white font-medium">Gemini API, RAG, vector search with PostgreSQL/pgvector, text-to-speech, FFmpeg, Docker, and cloud deployment</span>. I am comfortable debugging across the stack and adapting to unfamiliar technologies when a project requires it.' data-lang-id-html='Proyek-proyek terbaru saya juga melibatkan <span class="text-white font-medium">Gemini API, RAG, vector search dengan PostgreSQL/pgvector, text-to-speech, FFmpeg, Docker, dan deployment cloud</span>. Saya terbiasa melakukan debugging di seluruh lapisan stack dan beradaptasi dengan teknologi baru sesuai kebutuhan proyek.'>
                     My recent projects also involve <span class="text-white font-medium">Gemini API, RAG, vector search with PostgreSQL/pgvector, text-to-speech, FFmpeg, Docker, and cloud deployment</span>. I am comfortable debugging across the stack and adapting to unfamiliar technologies when a project requires it.
                 </p>
             </div>
@@ -746,17 +779,67 @@
             document.body.style.overflow = 'auto';
         }
 
-        /* Language Switcher Logic */
+        /* Optional QoL: close modal with Escape key */
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('[id^="modal"]:not(.hidden)').forEach(m => {
+                    m.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                });
+                closeMobileMenu();
+            }
+        });
+
+        /* Mobile hamburger menu */
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const isOpen = menu.classList.contains('flex');
+            if (isOpen) {
+                closeMobileMenu();
+            } else {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+                document.getElementById('hamburgerBtn').setAttribute('aria-expanded', 'true');
+                document.getElementById('hamburgerIcon').classList.add('is-open');
+            }
+        }
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.add('hidden');
+            menu.classList.remove('flex');
+            document.getElementById('hamburgerBtn').setAttribute('aria-expanded', 'false');
+            document.getElementById('hamburgerIcon').classList.remove('is-open');
+        }
+        // Auto-close mobile menu if the viewport grows back to desktop width
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) closeMobileMenu();
+        });
+
+        /*
+          Language Switcher Logic
+          FIX: sekarang mendukung dua jenis atribut:
+          - data-lang-en / data-lang-id      -> teks polos, di-set lewat textContent
+          - data-lang-en-html / data-lang-id-html -> markup HTML (mis. ada <span> bold
+            di dalamnya), di-set lewat innerHTML supaya formatting tidak hilang saat toggle.
+          Sebelumnya semua elemen (termasuk yang punya anak ber-atribut sendiri) di-set
+          pakai innerText, yang menghapus elemen anak begitu ada elemen induk yang juga
+          kebetulan punya data-lang-en/id versi teks polos.
+        */
         let currentLang = 'en';
         function toggleLanguage() {
             currentLang = currentLang === 'en' ? 'id' : 'en';
             document.getElementById('langLabel').innerText = currentLang === 'en' ? 'EN / ID' : 'ID / EN';
 
-            const elements = document.querySelectorAll('[data-lang-en]');
+            const elements = document.querySelectorAll('[data-lang-en], [data-lang-en-html]');
             elements.forEach(el => {
+                const htmlText = el.getAttribute(`data-lang-${currentLang}-html`);
+                if (htmlText !== null) {
+                    el.innerHTML = htmlText;
+                    return;
+                }
                 const text = el.getAttribute(`data-lang-${currentLang}`);
-                if (text) {
-                    el.innerText = text;
+                if (text !== null) {
+                    el.textContent = text;
                 }
             });
         }
