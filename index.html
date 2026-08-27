@@ -149,11 +149,17 @@
     <header class="sticky top-0 z-50 backdrop-blur-md" style="background: rgba(10,14,23,0.82); border-bottom: 1px solid var(--border);">
         <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
             <span class="font-display font-bold text-lg tracking-wider" style="color: var(--accent-teal);">ULUL<span style="color: var(--text-secondary);">.</span>DEV</span>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium font-mono" style="color: var(--text-secondary);">
-                <a href="#about" class="nav-link hover:text-white transition">About</a>
-                <a href="#projects" class="nav-link hover:text-white transition">Projects</a>
-                <a href="#contact" class="nav-link hover:text-white transition">Contact</a>
-            </nav>
+            <div class="flex items-center space-x-6">
+                <nav class="hidden md:flex space-x-8 text-sm font-medium font-mono" style="color: var(--text-secondary);">
+                    <a href="#about" class="nav-link hover:text-white transition" data-lang-en="About" data-lang-id="Tentang">About</a>
+                    <a href="#projects" class="nav-link hover:text-white transition" data-lang-en="Projects" data-lang-id="Portofolio">Projects</a>
+                    <a href="#contact" class="nav-link hover:text-white transition" data-lang-en="Contact" data-lang-id="Kontak">Contact</a>
+                </nav>
+                <!-- Language Switcher Toggle -->
+                <button onclick="toggleLanguage()" class="font-mono text-xs font-semibold px-3 py-1.5 rounded-lg border transition flex items-center gap-1.5" style="border-color: var(--border-hover); background: var(--surface); color: var(--accent-teal);">
+                    🌐 <span id="langLabel">EN / ID</span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -167,20 +173,20 @@
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background: var(--accent-teal);"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2" style="background: var(--accent-teal);"></span>
                 </span>
-                Open to Software Engineering Opportunities
+                <span data-lang-en="Open to Software Engineering Opportunities" data-lang-id="Terbuka untuk Lowongan Kerja & Freelance">Open to Software Engineering Opportunities</span>
             </span>
             <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-[1.1]">
                 Muhammad Ulul Albab
             </h1>
             <p class="text-base md:text-lg mb-8 leading-relaxed" style="color: var(--text-secondary);">
-                <strong class="text-white font-semibold">Junior Software Engineer | Full-Stack Web & AI</strong><br>
-                 I build practical full-stack and AI-powered applications, from backend APIs and AI pipelines to web and mobile interfaces. I enjoy taking features from idea to implementation, deployment, and debugging.
+                <strong class="text-white font-semibold" data-lang-en="Junior Software Engineer | Full-Stack Web & AI" data-lang-id="Junior Software Engineer | Full-Stack Web & AI">Junior Software Engineer | Full-Stack Web & AI</strong><br>
+                <span data-lang-en="I build practical full-stack and AI-powered applications, from backend APIs and AI pipelines to web and mobile interfaces. I enjoy taking features from idea to implementation, deployment, and debugging." data-lang-id="Saya membangun aplikasi web, mobile, dan backend berbasis AI secara terstruktur. Berfokus pada pengembangan sistem dari tahap ideasi hingga deployment ke cloud.">I build practical full-stack and AI-powered applications, from backend APIs and AI pipelines to web and mobile interfaces. I enjoy taking features from idea to implementation, deployment, and debugging.</span>
             </p>
             <div class="flex flex-wrap gap-4">
-                <a href="#projects" class="font-semibold px-6 py-3 rounded-xl transition shadow-lg" style="background: var(--accent-teal); color: #06120e; box-shadow: 0 10px 30px -10px rgba(34,230,181,0.45);">
+                <a href="#projects" class="font-semibold px-6 py-3 rounded-xl transition shadow-lg" style="background: var(--accent-teal); color: #06120e; box-shadow: 0 10px 30px -10px rgba(34,230,181,0.45);" data-lang-en="View Projects" data-lang-id="Lihat Projects">
                     View Projects
                 </a>
-                <a href="#contact" class="font-medium px-6 py-3 rounded-xl transition" style="border: 1px solid var(--border-hover); background: rgba(255,255,255,0.02); color: var(--text-primary);">
+                <a href="#contact" class="font-medium px-6 py-3 rounded-xl transition" style="border: 1px solid var(--border-hover); background: rgba(255,255,255,0.02); color: var(--text-primary);" data-lang-en="Get in Touch" data-lang-id="Hubungi Saya">
                     Get in Touch
                 </a>
             </div>
@@ -201,16 +207,16 @@
     <!-- About Section -->
     <section id="about" class="py-20" style="border-top: 1px solid var(--border); background: rgba(13,18,32,0.4);">
         <div class="max-w-5xl mx-auto px-6">
-            <span class="font-mono text-xs uppercase tracking-widest" style="color: var(--accent-teal);">// 01 &nbsp;about</span>
-            <h2 class="font-display text-2xl md:text-3xl font-bold mt-2 mb-6 text-white reveal">About Me</h2>
+            <span class="font-mono text-xs uppercase tracking-widest" style="color: var(--accent-teal);" data-lang-en="// 01  about" data-lang-id="// 01  tentang">// 01 &nbsp;about</span>
+            <h2 class="font-display text-2xl md:text-3xl font-bold mt-2 mb-6 text-white reveal" data-lang-en="About Me" data-lang-id="Tentang Saya">About Me</h2>
             <div class="leading-relaxed text-base md:text-lg max-w-3xl space-y-4 reveal" style="color: var(--text-secondary);">
-                <p>
+                <p data-lang-en="I am a junior software engineer with a Pharmacy background and a project-first approach to learning software engineering. My academic background trained me to work systematically, pay attention to detail, and solve problems through structured analysis." data-lang-id="Saya seorang junior software engineer dengan latar belakang Farmasi dan pendekatan praktis berbasis proyek. Latar belakang akademis melatih saya bekerja secara sistematis, teliti, dan memecahkan masalah melalui analisis terstruktur.">
                     I am a junior software engineer with a Pharmacy background and a project-first approach to learning software engineering. My academic background trained me to work systematically, pay attention to detail, and solve problems through structured analysis.
                 </p>
-                <p>
+                <p data-lang-en="I build web and mobile applications using React, React Native, and Expo, and backend services with Node.js, Express, and FastAPI. I have worked with authentication, role-based access, REST APIs, databases, and cloud deployment." data-lang-id="Saya membangun aplikasi web dan mobile menggunakan React, React Native, dan Expo, serta layanan backend menggunakan Node.js, Express, dan FastAPI. Terbiasa menangani autentikasi, RBAC, REST API, basis data, dan deployment cloud.">
                     I build web and mobile applications using <span class="text-white font-medium">React, React Native, and Expo</span>, and backend services with <span class="text-white font-medium">Node.js, Express, and FastAPI</span>. I have worked with authentication, role-based access, REST APIs, databases, and cloud deployment.
                 </p>
-                <p>
+                <p data-lang-en="My recent projects also involve Gemini API, RAG, vector search with PostgreSQL/pgvector, text-to-speech, FFmpeg, Docker, and cloud deployment. I am comfortable debugging across the stack and adapting to unfamiliar technologies when a project requires it." data-lang-id="Proyek-proyek terbaru saya juga melibatkan Gemini API, RAG, vector search dengan PostgreSQL/pgvector, text-to-speech, FFmpeg, Docker, dan deployment cloud.">
                     My recent projects also involve <span class="text-white font-medium">Gemini API, RAG, vector search with PostgreSQL/pgvector, text-to-speech, FFmpeg, Docker, and cloud deployment</span>. I am comfortable debugging across the stack and adapting to unfamiliar technologies when a project requires it.
                 </p>
             </div>
@@ -220,9 +226,9 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20" style="border-top: 1px solid var(--border);">
         <div class="max-w-5xl mx-auto px-6">
-            <span class="font-mono text-xs uppercase tracking-widest" style="color: var(--accent-teal);">// 02 &nbsp;projects</span>
-            <h2 class="font-display text-2xl md:text-3xl font-bold mt-2 mb-4 text-white reveal">Selected Engineering Projects</h2>
-            <p class="text-sm mb-10 reveal" style="color: var(--text-muted);">A selection of AI, full-stack, backend, and mobile projects I have built and deployed.</p>
+            <span class="font-mono text-xs uppercase tracking-widest" style="color: var(--accent-teal);" data-lang-en="// 02  projects" data-lang-id="// 02  portofolio">// 02 &nbsp;projects</span>
+            <h2 class="font-display text-2xl md:text-3xl font-bold mt-2 mb-4 text-white reveal" data-lang-en="Selected Engineering Projects" data-lang-id="Proyek Pilihan">Selected Engineering Projects</h2>
+            <p class="text-sm mb-10 reveal" style="color: var(--text-muted);" data-lang-en="A selection of AI, full-stack, backend, and mobile projects I have built and deployed." data-lang-id="Kumpulan proyek AI, full-stack, backend, dan aplikasi mobile yang telah saya bangun dan deploy.">A selection of AI, full-stack, backend, and mobile projects I have built and deployed.</p>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -232,7 +238,7 @@
                     <div class="h-48 overflow-hidden relative" style="background: var(--bg); border-bottom: 1px solid var(--border);">
                         <img src="project2.jpg" alt="PodLearn AI Podcast Generator" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
                         <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition flex items-center justify-center" style="background: rgba(10,14,23,0.5);">
-                            <span class="bg-violet-500 text-slate-950 font-bold text-xs px-3 py-1.5 rounded-lg shadow-md">View Details</span>
+                            <span class="bg-violet-500 text-slate-950 font-bold text-xs px-3 py-1.5 rounded-lg shadow-md" data-lang-en="View Details" data-lang-id="Lihat Detail">View Details</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -241,7 +247,7 @@
                             <span class="text-xs font-mono" style="color: var(--text-muted);">Node.js / Express</span>
                         </div>
                         <h3 class="text-2xl font-display font-bold mb-3 text-white group-hover:text-violet-400 transition">PodLearn AI</h3>
-                        <p class="text-sm leading-relaxed mb-6" style="color: var(--text-secondary);">
+                        <p class="text-sm leading-relaxed mb-6" style="color: var(--text-secondary);" data-lang-en="End-to-end AI learning platform that turns PDF/text materials into two-speaker podcasts, generated quizzes, and interactive mid-podcast Q&A." data-lang-id="Platform pembelajaran AI end-to-end yang mengubah PDF/teks menjadi podcast dua pembicara, generator kuis otomatis, dan tanya jawab interaktif.">
                             End-to-end AI learning platform that turns PDF/text materials into two-speaker podcasts, generated quizzes, and interactive mid-podcast Q&amp;A.
                         </p>
                     </div>
@@ -264,7 +270,7 @@
                     <div class="h-36 overflow-hidden relative" style="background: var(--bg); border-bottom: 1px solid var(--border);">
                         <img src="project4.jpg" alt="ScentDNA AI Fragrance Discovery Engine" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
                         <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition flex items-center justify-center" style="background: rgba(10,14,23,0.5);">
-                            <span class="bg-rose-500 text-slate-950 font-bold text-xs px-3 py-1.5 rounded-lg shadow-md">View Details</span>
+                            <span class="bg-rose-500 text-slate-950 font-bold text-xs px-3 py-1.5 rounded-lg shadow-md" data-lang-en="View Details" data-lang-id="Lihat Detail">View Details</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -273,7 +279,7 @@
                             <span class="text-xs font-mono" style="color: var(--text-muted);">FastAPI / Docker</span>
                         </div>
                         <h3 class="text-xl font-display font-bold mb-3 text-white group-hover:text-rose-400 transition">ScentDNA</h3>
-                        <p class="text-sm leading-relaxed mb-6" style="color: var(--text-secondary);">
+                        <p class="text-sm leading-relaxed mb-6" style="color: var(--text-secondary);" data-lang-en="AI fragrance search and recommendation engine using natural-language embeddings, PostgreSQL/pgvector retrieval, and Gemini-powered recommendations." data-lang-id="Mesin pencari dan rekomendasi parfum berbasis AI menggunakan embedding bahasa alami, PostgreSQL/pgvector, dan Gemini.">
                             AI fragrance search and recommendation engine using natural-language embeddings, PostgreSQL/pgvector retrieval, and Gemini-powered recommendations.
                         </p>
                     </div>
@@ -295,7 +301,7 @@
                     <div class="h-36 overflow-hidden relative" style="background: var(--bg); border-bottom: 1px solid var(--border);">
                         <img src="project7.jpg" alt="SchoolCom Management System" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
                         <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition flex items-center justify-center" style="background: rgba(10,14,23,0.5);">
-                            <span class="bg-blue-500 text-slate-950 font-bold text-xs px-3 py-1.5 rounded-lg shadow-md">View Details</span>
+                            <span class="bg-blue-500 text-slate-950 font-bold text-xs px-3 py-1.5 rounded-lg shadow-md" data-lang-en="View Details" data-lang-id="Lihat Detail">View Details</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -304,7 +310,7 @@
                             <span class="text-xs font-mono" style="color: var(--text-muted);">Expo / Firestore</span>
                         </div>
                         <h3 class="text-xl font-display font-bold mb-3 text-white group-hover:text-blue-400 transition">SchoolCom</h3>
-                        <p class="text-sm leading-relaxed mb-6" style="color: var(--text-secondary);">
+                        <p class="text-sm leading-relaxed mb-6" style="color: var(--text-secondary);" data-lang-en="Role-based school management platform covering attendance, assessments, student progress, and administrative workflows." data-lang-id="Platform manajemen sekolah berbasis peran yang mencakup absensi, penilaian, perkembangan siswa, dan alur kerja administrasi.">
                             Role-based school management platform covering attendance, assessments, student progress, and administrative workflows.
                         </p>
                     </div>
@@ -326,7 +332,7 @@
                     <div class="h-36 overflow-hidden relative" style="background: var(--bg); border-bottom: 1px solid var(--border);">
                         <img src="project1.jpg" alt="Clinical Suite Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition flex items-center justify-center" style="background: rgba(10,14,23,0.5);">
-                            <span class="bg-cyan-500 text-slate-950 font-bold text-xs px-3 py-1.5 rounded-lg shadow-md">View Details</span>
+                            <span class="bg-cyan-500 text-slate-950 font-bold text-xs px-3 py-1.5 rounded-lg shadow-md" data-lang-en="View Details" data-lang-id="Lihat Detail">View Details</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -335,7 +341,7 @@
                             <span class="text-xs font-mono" style="color: var(--text-muted);">HTML / JS</span>
                         </div>
                         <h3 class="text-xl font-display font-bold mb-3 text-white group-hover:text-cyan-400 transition">Clinical Suite Dashboard</h3>
-                        <p class="text-sm leading-relaxed mb-6" style="color: var(--text-secondary);">
+                        <p class="text-sm leading-relaxed mb-6" style="color: var(--text-secondary);" data-lang-en="Clinical management dashboard with structured data workflows and automated clinical parameter calculators." data-lang-id="Dashboard manajemen klinis dengan alur data terstruktur dan kalkulator parameter klinis otomatis.">
                             Clinical management dashboard with structured data workflows and automated clinical parameter calculators.
                         </p>
                     </div>
@@ -356,7 +362,7 @@
                     <div class="h-36 overflow-hidden relative" style="background: var(--bg); border-bottom: 1px solid var(--border);">
                         <img src="project6.jpg" alt="LDR Anchor Mobile App" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
                         <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition flex items-center justify-center" style="background: rgba(10,14,23,0.5);">
-                            <span class="bg-orange-500 text-slate-950 font-bold text-xs px-3 py-1.5 rounded-lg shadow-md">View Details</span>
+                            <span class="bg-orange-500 text-slate-950 font-bold text-xs px-3 py-1.5 rounded-lg shadow-md" data-lang-en="View Details" data-lang-id="Lihat Detail">View Details</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -365,7 +371,7 @@
                             <span class="text-xs font-mono" style="color: var(--text-muted);">React Native / Firebase</span>
                         </div>
                         <h3 class="text-xl font-display font-bold mb-3 text-white group-hover:text-orange-400 transition">LDR Anchor</h3>
-                        <p class="text-sm leading-relaxed mb-6" style="color: var(--text-secondary);">
+                        <p class="text-sm leading-relaxed mb-6" style="color: var(--text-secondary);" data-lang-en="Android application with real-time mood synchronization, interactive features, and automated push notifications using Firebase Cloud Messaging." data-lang-id="Aplikasi Android dengan sinkronisasi mood real-time, fitur interaktif, dan notifikasi otomatis via FCM.">
                             Android application with real-time mood synchronization, interactive features, and automated push notifications using Firebase Cloud Messaging.
                         </p>
                     </div>
@@ -384,9 +390,9 @@
             </div>
 
             <div class="mt-14 mb-6 reveal">
-                <span class="font-mono text-xs uppercase tracking-widest" style="color: var(--accent-teal);">// additional work</span>
-                <h3 class="font-display text-xl md:text-2xl font-bold mt-2 text-white">Additional Projects</h3>
-                <p class="text-sm mt-2" style="color: var(--text-muted);">Other projects that show breadth across web development, automation, and product prototyping.</p>
+                <span class="font-mono text-xs uppercase tracking-widest" style="color: var(--accent-teal);" data-lang-en="// additional work" data-lang-id="// proyek tambahan">// additional work</span>
+                <h3 class="font-display text-xl md:text-2xl font-bold mt-2 text-white" data-lang-en="Additional Projects" data-lang-id="Proyek Tambahan">Additional Projects</h3>
+                <p class="text-sm mt-2" style="color: var(--text-muted);" data-lang-en="Other projects that show breadth across web development, automation, and product prototyping." data-lang-id="Proyek lain yang menunjukkan cakupan keahlian dalam web development, otomasi, dan prototyping.">Other projects that show breadth across web development, automation, and product prototyping.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -394,7 +400,7 @@
                     <div>
                         <span class="text-xs font-semibold px-3 py-1 bg-pink-500/10 text-pink-400 rounded-full border border-pink-500/20 inline-block mb-4">Frontend Prototype</span>
                         <h3 class="text-lg font-display font-bold mb-2 text-white group-hover:text-pink-400 transition">Digital Wedding Invitation</h3>
-                        <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">Responsive React/Vite prototype built around reusable UI and data-driven customization.</p>
+                        <p class="text-xs leading-relaxed" style="color: var(--text-secondary);" data-lang-en="Responsive React/Vite prototype built around reusable UI and data-driven customization." data-lang-id="Prototype React/Vite responsif berbasis komponen UI yang dapat dikustomisasi.">Responsive React/Vite prototype built around reusable UI and data-driven customization.</p>
                     </div>
                 </div>
 
@@ -402,7 +408,7 @@
                     <div>
                         <span class="text-xs font-semibold px-3 py-1 bg-sky-500/10 text-sky-400 rounded-full border border-sky-500/20 inline-block mb-4">Web Application</span>
                         <h3 class="text-lg font-display font-bold mb-2 text-white group-hover:text-sky-400 transition">Cloud Inventory System</h3>
-                        <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">Serverless inventory workflow using Google Apps Script and Google Sheets.</p>
+                        <p class="text-xs leading-relaxed" style="color: var(--text-secondary);" data-lang-en="Serverless inventory workflow using Google Apps Script and Google Sheets." data-lang-id="Sistem inventaris serverless menggunakan Google Apps Script dan Google Sheets.">Serverless inventory workflow using Google Apps Script and Google Sheets.</p>
                     </div>
                 </div>
 
@@ -410,7 +416,7 @@
                     <div>
                         <span class="text-xs font-semibold px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20 inline-block mb-4">AI Bot</span>
                         <h3 class="text-lg font-display font-bold mb-2 text-white group-hover:text-purple-400 transition">Telegram AI Assistant</h3>
-                        <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">Python-based Telegram assistant integrating an LLM through an API and cloud deployment.</p>
+                        <p class="text-xs leading-relaxed" style="color: var(--text-secondary);" data-lang-en="Python-based Telegram assistant integrating an LLM through an API and cloud deployment." data-lang-id="Asisten Telegram Python yang terintegrasi LLM melalui API dan di-deploy ke cloud.">Python-based Telegram assistant integrating an LLM through an API and cloud deployment.</p>
                     </div>
                 </div>
 
@@ -418,7 +424,7 @@
                     <div>
                         <span class="text-xs font-semibold px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-full border border-emerald-500/20 inline-block mb-4">Full-Stack Web</span>
                         <h3 class="text-lg font-display font-bold mb-2 text-white group-hover:text-emerald-400 transition">Domain Explorer</h3>
-                        <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">Laravel and MySQL application for structured domain research and management.</p>
+                        <p class="text-xs leading-relaxed" style="color: var(--text-secondary);" data-lang-en="Laravel and MySQL application for structured domain research and management." data-lang-id="Aplikasi Laravel dan MySQL untuk riset serta manajemen domain terstruktur.">Laravel and MySQL application for structured domain research and management.</p>
                     </div>
                 </div>
             </div>
@@ -700,19 +706,23 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 text-center" style="border-top: 1px solid var(--border); background: rgba(13,18,32,0.4);">
         <div class="max-w-3xl mx-auto px-6">
-            <span class="font-mono text-xs uppercase tracking-widest" style="color: var(--accent-teal);">// 03 &nbsp;contact</span>
-            <h2 class="font-display text-2xl md:text-3xl font-bold mt-2 mb-4 text-white reveal">Let's Connect</h2>
-            <p class="mb-8 reveal" style="color: var(--text-secondary);">
+            <span class="font-mono text-xs uppercase tracking-widest" style="color: var(--accent-teal);" data-lang-en="// 03  contact" data-lang-id="// 03  kontak">// 03 &nbsp;contact</span>
+            <h2 class="font-display text-2xl md:text-3xl font-bold mt-2 mb-4 text-white reveal" data-lang-en="Let's Connect" data-lang-id="Hubungi Saya">Let's Connect</h2>
+            <p class="mb-8 reveal" style="color: var(--text-secondary);" data-lang-en="Interested in my work or discussing a software engineering opportunity? Feel free to reach out." data-lang-id="Tertarik dengan hasil kerja saya atau ingin mendiskusikan peluang kerja/proyek? Silakan hubungi saya.">
                 Interested in my work or discussing a software engineering opportunity? Feel free to reach out.
             </p>
             <div class="flex flex-wrap justify-center gap-4 reveal">
-                <a href="mailto:ulula2812@gmail.com" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-xl transition shadow-lg shadow-emerald-600/20">
+                <!-- Direct WhatsApp Link Button -->
+                <a href="https://wa.me/62895414781707?text=Halo%20Ulul,%20saya%20tertarik%20untuk%20diskusi%20proyek/peluang%20kerja." target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-xl transition shadow-lg shadow-emerald-600/20" data-lang-en="💬 WhatsApp Me" data-lang-id="💬 Chat via WhatsApp">
+                    💬 WhatsApp Me
+                </a>
+                <a href="mailto:ulula2812@gmail.com" class="inline-block font-bold px-8 py-3.5 rounded-xl transition" style="background: var(--surface-hover); border: 1px solid var(--border-hover); color: var(--text-primary);" data-lang-en="Email Me" data-lang-id="Kirim Email">
                     Email Me
                 </a>
-                <a href="Portfolio_Muhammad_Ulul_Albab_AICines.pptx" download class="inline-block font-bold px-8 py-3.5 rounded-xl transition shadow-lg" style="background: var(--accent-teal); color: #06120e;">
+                <a href="Portfolio_Muhammad_Ulul_Albab_AICines.pptx" download class="inline-block font-bold px-8 py-3.5 rounded-xl transition shadow-lg" style="background: var(--accent-teal); color: #06120e;" data-lang-en="Download Portfolio (PPT)" data-lang-id="Download Portofolio (PPT)">
                     Download Portfolio (PPT)
                 </a>
-                <a href="CV_MuhammadUlulAlbab.pdf" download class="inline-block font-bold px-8 py-3.5 rounded-xl transition shadow-lg" style="background: var(--surface-hover); border: 1px solid var(--border-hover); color: var(--accent-teal);">
+                <a href="CV_MuhammadUlulAlbab.pdf" download class="inline-block font-bold px-8 py-3.5 rounded-xl transition shadow-lg" style="background: var(--surface-hover); border: 1px solid var(--border-hover); color: var(--accent-teal);" data-lang-en="Download CV (PDF)" data-lang-id="Download CV (PDF)">
                     Download CV (PDF)
                 </a>
             </div>
@@ -735,6 +745,21 @@
             document.getElementById(modalId).classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
+
+        /* Language Switcher Logic */
+        let currentLang = 'en';
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'id' : 'en';
+            document.getElementById('langLabel').innerText = currentLang === 'en' ? 'EN / ID' : 'ID / EN';
+
+            const elements = document.querySelectorAll('[data-lang-en]');
+            elements.forEach(el => {
+                const text = el.getAttribute(`data-lang-${currentLang}`);
+                if (text) {
+                    el.innerText = text;
+                }
+            });
+        }
     </script>
 
     <!-- Scroll reveal -->
@@ -756,7 +781,7 @@
         }
     </script>
 
-    <!-- Signature background: molecule / network canvas (bio-tech motif, nod ke latar farmasi + dev) -->
+    <!-- Signature background: molecule / network canvas -->
     <script>
         (function () {
             const canvas = document.getElementById('molecule-canvas');
